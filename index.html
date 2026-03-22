@@ -4,24 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E - Portfolio</title>
-    <link rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 </head>
 <body>
     <div class="container">
 
-        <!--navbar-->
         <header class="navbar">
+           <!--navbar-->
             <nav>
-                <ul class="nav-links">
+              <div class="hamburger"id="hamburger">=</div>
+                <ul class="nav-links" id="nav-links">
                    <li><a href="#home">Home</a></li>
                    <li><a href="#about">About</a></li>
                    <li><a href="#skills">Skills</a></li>
                    <li><a href="#projects">Projects</a></li>
                    <li><a href="#contact">Contacts</a></li>
                 </ul>
-            </nav>
+            </nav>  
         </header>
+
+        <div class="overlay" id="overlay"></div>
 
         <!--Home Section-->
         <section id="home" class="home section-hidden">
@@ -49,7 +52,7 @@
 
           <!--profile image-->
            <div class="home-image">
-            <img src="../assets/profile.webp" alt="Paolo Profile">
+            <img src="assets/profile.webp" alt="Paolo Profile">
         </div>
         </div>
         </section>
@@ -100,12 +103,12 @@
 
           <div class="skill-item">
             <i class="devicon-html5-plain colored"></i>
-            <span>HTML</span>
+            <span>HTML 5</span>
           </div>
 
           <div class="skill-item">
             <i class="devicon-css3-plain colored"></i>
-            <span>CSS</span>
+            <span>CSS 3</span>
           </div>
 
           <div class="skill-item">
@@ -285,6 +288,6 @@
 </section>
 
 </div>
-    <script src="/js/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
