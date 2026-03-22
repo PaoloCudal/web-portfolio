@@ -115,18 +115,16 @@ html{
 
 /*profile image */
 .home-image img{
-      width: 320px;
+      width: 340px;
+      height: auto;
       margin-bottom:15px;
       border-radius:50%;
+      animation: float 4s ease-in-out infinite;
+      border: 3px solid #38bdf8;
+      box-shadow:  0 0 15px #38bdf899, 0 0 30px #38bdf866, 0 0 60px #38bdf833;
       margin-top:40px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.home-image img:hover{
-    transform: translateY(-10px) scale(1.03);
-    transition: transform 0.3 ease;
-    box-shadow: 0 0 40px rgba(56, 189, 248, 0.6);
-}
 
 /*stack inside  type paragraph*/
 .home-text a{
@@ -358,23 +356,31 @@ html{
     cursor: pointer;
 }
 
-
 /*Responsiveness*/
 @media (max-width: 768px) {
     
     /*Humberger*/
     .hamburger{
         display: block;
-        font-size: 36px;
+        cursor: pointer;
     }
 
-    .hamburger:hover{
-    background: rgba(255,255,255,0.1);
-     }
+    .hamburger span{
+        font-size: 28px;
+        border-radius: 6px;
+        transition: 0.2s;
+    }
+
+    .hamburger span:hover{
+      background-color: none;
+      color: #38bdf8;
+      text-shadow: 0 0 10px #38bdf8;
+    }
 
     /* Navbar */
     .nav-links{
       position: fixed;
+      z-index: 1000;
       top: 0;
       left: -260px;
       height: 100vh;
@@ -399,6 +405,7 @@ html{
     /* Home Section */
     .home{
         padding: 60px 20px;
+        margin-top: 70px;
     }
 
     .home-content{
@@ -419,6 +426,11 @@ html{
     .home-description{
         font-size: 16px;
         max-width: 100%;
+    }
+    
+    .home-image{
+        order: -1;
+         margin-bottom: 20px;
     }
 
     .home-image img{
@@ -463,6 +475,8 @@ html{
     }
 }
 
+/*Animations*/
+
 /*sections animation*/
 .section-hidden{
     transform: translateY(-60px);
@@ -474,4 +488,10 @@ html{
     transform: translateY(0);
     opacity: 1;
     
+}
+
+@keyframes float{
+    0% {transform: translateY(0px); }
+    50%  { transform: translateY(-12px); }
+    100% { transform: translateY(0px); }
 }
