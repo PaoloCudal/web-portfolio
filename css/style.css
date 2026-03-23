@@ -236,6 +236,15 @@ html{
     align-items: center;
     justify-content: center;
 }
+
+.skill-item img{
+     font-size: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
 .skill-item span{
     display: inline-block;
     background: #011720;
